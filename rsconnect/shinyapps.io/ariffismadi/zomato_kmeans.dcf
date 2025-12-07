@@ -1,0 +1,13 @@
+name: zomato_kmeans
+title: zomato_kmeans
+username: ariffismadi
+account: ariffismadi
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 16262215
+bundleId: 11288453
+url: https://ariffismadi.shinyapps.io/zomato_kmeans/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .ipynb_checkpoints/project_proposal-checkpoint.ipynb|.ipynb_checkpoints/project-checkpoint.ipynb|.ipynb_checkpoints/Untitled-checkpoint.ipynb|Food_Delivery_Times.csv|project_proposal.ipynb|project.ipynb|Untitled.ipynb|Zomato Dataset.csv
