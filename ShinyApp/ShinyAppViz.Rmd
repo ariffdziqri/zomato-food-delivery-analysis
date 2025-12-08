@@ -1,6 +1,7 @@
 ---
 title: "project_451"
 output: html_document
+runtime: shiny
 date: "2025-11-30"
 ---
 
@@ -53,24 +54,6 @@ cluster_df$Road_traffic_density <- factor(cluster_df$Road_traffic_density,
 cluster_df$City <- factor(cluster_df$City, levels = 
                             c("Metropolitian", "Urban", "Semi-Urban"))
 
-```
-
-
-Test
-```{r, include=FALSE}
-set.seed(133)
-cluster2 <- cluster_f(cluster_df, 2)
-
-cluster2 %>% 
-  ggplot(aes(x= cluster2$day_hour, y=`Time_taken (min)`, 
-             col=cluster2$Road_traffic_density,
-             #size = factor(City, levels = c("Metropolitian", "Urban", "Semi-Urban")),
-             group = .cluster)) +
-  geom_point() +
-  facet_wrap(~.cluster) +
-  labs(
-    color = "Traffic",
-  )
 ```
 
 

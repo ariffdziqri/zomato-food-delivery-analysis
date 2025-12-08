@@ -1,0 +1,12 @@
+name: Zomato-Delivery-Analysis
+title: Zomato-Delivery-Analysis
+username: ariffismadi
+account: ariffismadi
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 16263950
+bundleId: 11289503
+url: https://ariffismadi.shinyapps.io/Zomato-Delivery-Analysis/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
