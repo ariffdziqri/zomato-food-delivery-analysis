@@ -1,3 +1,7 @@
+# Kmeans Visualization
+Interactive visualization of how traffic, distance, city type, and time-of-day influence delivery time
+https://ariffismadi.shinyapps.io/Zomato-Delivery-Analysis/
+
 # Stacking Model for Delivery Time Prediction
 
 This project builds a **stacking regression model** to predict delivery time (in minutes) using a combination of tree-based models and k-nearest neighbors, wrapped in a fully reproducible scikit-learn pipeline.
@@ -40,11 +44,15 @@ You must specify:
 
 Example:
 ```python
-features = ["Distance", "Weather", "Traffic", "Vehicle_type"]
-numeric_f = ["Distance"]
-cat_f = ["Weather", "Traffic", "Vehicle_type"]
+features = 'Delivery_person_Age', 'Vehicle_condition', 'multiple_deliveries', 
+               'Weather_conditions', 'Road_traffic_density', 'City', "distance_miles"]
+numeric_f = ['Delivery_person_Age', 'Vehicle_condition', 'multiple_deliveries', "distance_miles"]
+cat_f = ['Weather_conditions', 'Road_traffic_density', 'City']
 # How to Train the Model
+from preprocess import Prep
 from model import BuildModel
+filename = '../dataset/Zomato Dataset.csv'
+df = Prep((filename)).clean()
 
 bm = BuildModel(
     df=df,
@@ -75,12 +83,12 @@ bm2 = BuildModel.load("stacking.joblib")
 preds = bm2.predict(new_df[features])
 # This restores the exact trained model and allows predictions on new data.
 ```
-# Reproducibility Notes
+### Reproducibility Notes
  - All models use a fixed random_state
  - The full preprocessing + model pipeline is saved
  - Predictions from a loaded model will match the original model exactly
  - To ensure reproducibility across machines, use the same library versions.
-# Requirements:
+### Requirements:
  1. python >= 3.10
  2. pandas
  3. scikit-learn
